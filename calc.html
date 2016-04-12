@@ -1,0 +1,71 @@
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>CORE2016 P3</title>
+		<link href="normal.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" media='only screen and (max-device-width:480px)' href="movil.css"/>
+		
+		<script type ="text/javascript" src="jquery-2.2.0.min.js"></script>
+
+		<script type ="text/javascript"> 
+		
+		var acc=0, op="";
+		
+		//var b=10;
+		
+		$(function () {
+		
+
+		$("#pantalla").on("click",
+				function(){$("#pantalla").val("")}
+		);
+
+		$("#cuadrado").on("click",
+		    function () {
+				var num = $("#pantalla");
+				if (isNaN(num.val()) || num.val()===" ") {num.val("Error")}
+				else { 
+					num.val(num.val() * num.val());
+				}
+			}
+		);
+		
+		
+		
+		
+
+	    });
+
+		</script>
+	</head>
+
+	<body > 
+
+		<header>Buenos días, bienvenido a la calculadora de Alejandro Sánchez Espinosa (alejandro.sanchezes@alumnos.upm.es)</header>
+		
+		<p>
+
+		<div id="main">
+
+		<p>
+
+		Número:
+		<input type="text" id="pantalla"/>
+		
+		<button id = "cuadrado">
+			x<sup>2</sup>
+		</button>
+
+		<p>
+
+		
+
+	</div>
+
+	</body>
+
+
+</html>
+
+
