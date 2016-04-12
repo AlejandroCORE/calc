@@ -12,7 +12,7 @@
 		
 		var acc=0, op="";
 		
-		//var b=10;
+
 		
 		$(function () {
 		
@@ -30,12 +30,38 @@
 				}
 			}
 		);
+
+		$("#cubo").on("click",
+		    function () {
+				var num = $("#pantalla");
+				if (isNaN(num.val()) || num.val()===" ") {num.val("Error")}
+				else { 
+					num.val(num.val() * num.val()*num.val());
+				}
+			}
+		);
+	
+
 		
-		
+		$("#raiz").on("click",
+		    function () {
+				var num = $("#pantalla");
+				if (isNaN(num.val()) || num.val()===" ") {num.val("Error")}
+				else {
+					num.val(Math.sqrt(num.val()));
+				}
+		    }
+		);
 		
 		
 
 	    });
+
+		
+
+
+
+
 
 		</script>
 	</head>
@@ -53,9 +79,19 @@
 		Número:
 		<input type="text" id="pantalla"/>
 		
+
 		<button id = "cuadrado">
 			x<sup>2</sup>
 		</button>
+
+		<button id = "raiz">
+			sqrt(x)
+		</button>
+
+		<button id = "cubo">
+			x<sup>3</sup>
+		</button>
+
 
 		<p>
 
